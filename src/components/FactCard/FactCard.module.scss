@@ -1,0 +1,56 @@
+@import '../../styles/variables';
+
+.factCard {
+  padding: 1.5rem;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  width: -webkit-fill-available;
+  min-height: 15.5rem;
+  background-color: white;
+  border: 1rem solid white;
+  cursor: pointer;
+
+  &.default {
+    justify-content: center;
+
+    &:hover {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+      color: white;
+
+      button {
+        background: $secondary-color;
+        border: 2px solid white;
+      }
+    }
+  }
+
+  &.border {
+    justify-content: flex-start;
+
+    &:hover {
+      border-color: $secondary-color;
+
+      button {
+        background: $secondary-color;
+      }
+    }
+
+
+  }
+}
+
+
+
+.default {
+  grid-row: 1;
+  align-self: start;
+}
+
+.border {
+  grid-row: 2;
+  align-self: end;
+}

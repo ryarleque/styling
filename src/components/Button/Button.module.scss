@@ -1,0 +1,83 @@
+@import '../../styles/variables';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: -0.5px;
+    border: none;
+    line-height: 24px;
+    background-color: $primary-color;
+    color: white;
+    gap: 1rem;
+    max-width: 20rem;
+    font-size: 12px;
+    height: 3rem;
+    padding: 0.5rem 2rem;
+
+    @media (min-width: 1200px) {
+        font-size: 19px;
+        padding: 0.75rem 2.5rem;
+        height: 4rem;
+    }
+
+
+
+
+    &.default {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+    }
+
+    &.icon {
+        display: flex;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        svg {
+            font-size: 3rem;
+        }
+    }
+
+    &.disabled {
+        background-color: $gray !important;
+        color: white;
+        cursor: not-allowed;
+    }
+
+    .noWrapText {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+        line-height: 1.25;
+    }
+
+    .truncated {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left;
+        line-height: 1.25;
+    }
+
+
+
+}
